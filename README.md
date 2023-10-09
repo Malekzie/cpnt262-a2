@@ -23,3 +23,9 @@
 
 ## Entry 3
 The new function broke the code so I scrapped it. Making up a new one
+
+## Entry 4
+Decided on a simple string concat game where your input is placed above the text and is changed when you placed an input. 
+
+## Entry 5
+Learned a cool thing when researching, event.preventDefault prevents the page to reload whenever a submit request is sent. 
