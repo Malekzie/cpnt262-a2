@@ -10,4 +10,14 @@ function clickCounter() {
     function negativeCounter(){
       counterElement.innerHTML = counter;
     }
+    
+  // Inner function that decrements the counter
+  function decrementCounter(){
+    if (counter > 0){
+      counter--;
+      negativeCounter();
+    } else {
+      alert("Count too low! STOP THAT!");
+    }
+  }
 }
