@@ -35,10 +35,19 @@ document.getElementById("string-game-form").addEventListener("submit", function(
   const animal = document.getElementById("second-input").value;
   const place = document.getElementById("third-input").value;
 
+  
+  if (name && animal && place) { 
   // String Concatenation 
   const result = `Hello, my name is ${name}. My favorite animal is the ${animal}, and I love visiting the ${place}.`;
+  
+  // Replaces text above to show result
+    document.querySelector(".replaced").innerHTML = result;
+  } else {
+    // If fields are empty, displays an error message
+    document.querySelector(".replaced").innerHTML = "Please fill in the fields";
+  }
 
-  document.querySelector(".replaced").innerHTML = result;
+  // Checks values to make sure input value is more than three characters
 })
 // calls the function to the html
 clickCounter();
