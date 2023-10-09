@@ -4,26 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Strings and Numbers</title>
-  <style src="client.js" type="module" defer></style>
+  <script src="client.js" type="module" defer></script>
 </head>
 <body>
   <main>
+    <!-- button Clicker div -->
     <div class="button-clicker">
       <h1 id="title">Button Clicker</h1>
       <!-- Counts the amount of clicks -->
       <p class="counter">You have clicked <span class="counted">0</span> times!</p>
+      
       <button class="countUp">Add 1</button>
       <button class="countDown">Remove 1</button>
     </div>
-    <div class="password-tester">
-      <h1>Login</h1>
-      <form action="#" id="login-form">
-        <label for="password">Enter Password:</label>
-        <input type="text" name="password" id="user-pass-input" required>
-        <input type="submit" value="Login">
+    <br>
+    <!-- String game div -->
+    <div class="string-game">
+      <h1>String Game</h1>
+      <p class="replaced">Your result will show here</p>
+      <form action="#">
+        <label for="input1">Enter your name:</label>
+        <input type="text" name="input1" id="first-input">
+        <br>
+        <label for="input2">Enter your favorite animal:</label>
+        <input type="text" name="input2" id="second-input">
+        <br>
+        <label for="input3">Enter a random place:</label>
+        <input type="text" name="input3" id="third-input">
       </form>
-      <p id="error-message"></p>
     </div>
   </main>
+  
 </body>
 </html>
