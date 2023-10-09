@@ -20,4 +20,11 @@ function clickCounter() {
       alert("Count too low! STOP THAT!");
     }
   }
+
+  // Inner function that increments counter
+  function incrementCounter() {
+    counter++;
+    updateCounter();
+  }
+
 }
