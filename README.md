@@ -18,4 +18,6 @@
  Regex hurts my brain. After multiple attempts and a few failures, I managed to get what I want as a password validator which are:
 - At least one digit (`\d`)
 - At least one lower case letter (`[a-z]`)
+- At least one uppercase letter (`[A-Z]`)
+- A minimum of 8 Characters (`.{8,}`)
 
