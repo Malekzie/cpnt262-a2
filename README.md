@@ -2,6 +2,8 @@
 
 ## By Robbie Soriano
 
+[GH Page](https://malekzie.github.io/cpnt262-a2/)
+
 ## Attributions: ChatGPT
 - Mostly asked it for specifics that my code needs and asked it to explain to me how it works, how to put it in and if it is valid or not.
 ### For example:
