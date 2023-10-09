@@ -28,4 +28,8 @@ The new function broke the code so I scrapped it. Making up a new one
 Decided on a simple string concat game where your input is placed above the text and is changed when you placed an input. 
 
 ## Entry 5
-Learned a cool thing when researching, event.preventDefault prevents the page to reload whenever a submit request is sent. 
+Learned a cool thing when researching, "event.preventDefault" prevents the page to reload whenever a submit request is sent. Also learned about the .value method which gives me a couple new ideas now. 
+
+
+## Entry 6
+Learned more stuff about numerical methods. parseFloat turns an input into numerical value in which I can use for my math
