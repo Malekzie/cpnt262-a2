@@ -21,3 +21,5 @@
 - At least one uppercase letter (`[A-Z]`)
 - A minimum of 8 Characters (`.{8,}`)
 
+## Entry 3
+The new function broke the code so I scrapped it. Making up a new one
