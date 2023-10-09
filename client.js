@@ -1,43 +1,32 @@
 function clickCounter() {
-  // Defines html tags as variables to be used inside function
   const addOne = document.querySelector(".countUp");
-  const removeOne = document.querySelector(".countDown");
+  const downOne = document.querySelector(".countDown");
   const counterElement = document.querySelector(".counted");
-  // Counter variable
-  let counter = 0;
 
-    // Inner function that updates the counter
-    function negativeCounter(){
-      counterElement.innerHTML = counter;
-    }
-    
-  // Inner function that decrements the counter
-  function decrementCounter(){
-    if (counter > 0){
-      counter--;
-      negativeCounter();
-    } else {
-      alert("Count too low! STOP THAT!");
-    }
+  let count  = 0;
 
-  // Adds event listeners on variables and uses the functions as its parameter
-  removeOne.addEventListener("click", decrementCounter);
-
-  addOne.addEventListener("click", incrementCounter);
+  function updateCount() {
+    counterElement.textContent = count;
+  }
+  
+  function incrementOne() {
+    count++;
+    updateCount();
   }
 
-  // Inner function that increments counter
-  function incrementCounter() {
-    counter++;
-    updateCounter();
+  function decrementOne() {
+    if (count > 0){
+      count--;
+      updateCount();
+    } else{
+      alert("Count too low! STOP THAT");
+    }
   }
 
-  // Adds event listeners on variables and uses the functions as its parameter
-  removeOne.addEventListener("click", decrementCounter);
-
-  addOne.addEventListener("click", incrementCounter);
+  addOne.addEventListener("click", incrementOne);
+  downOne.addEventListener("click", decrementOne);
+  
 }
-
 // Function for the Password Checking form
 function passwordChecker(){
   // makes sure that JS is executed after page has loaded in 
@@ -60,7 +49,7 @@ function passwordChecker(){
       errMsg.innerHTML = "Invalid Password. Try again!";
     }
 
-    // Function to check minim password criteria
+    // Function to check minimum password criteria
     function isValidPassword(password) {
       const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
       return passwordPattern.test(password);
