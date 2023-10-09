@@ -34,3 +34,19 @@ function clickCounter() {
 }
 // calls the function to the html
 clickCounter();
+
+
+// Function for the Password Checking form
+function passwordChecker(){
+  // makes sure that JS is executed after page has loaded in 
+  document.addEventListener("DOMContentLoaded", function(){
+    const loginForm = document.getElementById("login-form");
+    const passwordInput = document.getElementById("user-pass-input");
+
+    loginForm.addEventListener("submit", function(event){
+      event.preventDefault(); 
+    })
+    // Places the value of the inputted password as value to the variable
+    const enteredPassword = passwordInput.value;
+  })
+}
