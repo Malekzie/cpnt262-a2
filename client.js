@@ -19,6 +19,11 @@ function clickCounter() {
     } else {
       alert("Count too low! STOP THAT!");
     }
+
+  // Adds event listeners on variables and uses the functions as its parameter
+  removeOne.addEventListener("click", decrementCounter);
+
+  addOne.addEventListener("click", incrementCounter);
   }
 
   // Inner function that increments counter
@@ -32,9 +37,6 @@ function clickCounter() {
 
   addOne.addEventListener("click", incrementCounter);
 }
-// calls the function to the html
-clickCounter();
-
 
 // Function for the Password Checking form
 function passwordChecker(){
@@ -42,11 +44,30 @@ function passwordChecker(){
   document.addEventListener("DOMContentLoaded", function(){
     const loginForm = document.getElementById("login-form");
     const passwordInput = document.getElementById("user-pass-input");
-
+    const errMsg = document.getElementById("error-message");
+    
     loginForm.addEventListener("submit", function(event){
       event.preventDefault(); 
     })
     // Places the value of the inputted password as value to the variable
     const enteredPassword = passwordInput.value;
+
+    if(isValidPassword(enteredPassword)) {
+      errMsg.style.color = "green";
+      errMsg.innerHTML = "Login Successful!";
+    } else {
+      errMsg.style.color = "red";
+      errMsg.innerHTML = "Invalid Password. Try again!";
+    }
+
+    // Function to check minim password criteria
+    function isValidPassword(password) {
+      const passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+      return passwordPattern.test(password);
+    }
   })
 }
+
+// calls the function to the html
+clickCounter();
+passwordChecker();
