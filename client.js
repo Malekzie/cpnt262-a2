@@ -27,4 +27,10 @@ function clickCounter() {
     updateCounter();
   }
 
+  // Adds event listeners on variables and uses the functions as its parameter
+  removeOne.addEventListener("click", decrementCounter);
+
+  addOne.addEventListener("click", incrementCounter);
 }
+// calls the function to the html
+clickCounter();
