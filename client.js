@@ -5,4 +5,9 @@ function clickCounter() {
   const counterElement = document.querySelector(".counted");
   // Counter variable
   let counter = 0;
+
+    // Inner function that updates the counter
+    function negativeCounter(){
+      counterElement.innerHTML = counter;
+    }
 }
